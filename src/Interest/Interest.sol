@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // Copyright (C) 2018 Rain <rainbreak@riseup.net> and Centrifuge, referencing MakerDAO dss => https://github.com/makerdao/dss/blob/master/src/pot.sol
-pragma solidity ^0.8.10;
+pragma solidity ^0.8.13;
 
 import "./Math.sol";
 
@@ -16,7 +16,7 @@ contract Interest is Math {
         require(chi != 0);
         // instead of a interestBearingAmount we use a accumulated interest rate index (chi)
         uint updatedChi = _chargeInterest(chi ,ratePerSecond, lastUpdated, block.timestamp);
-        return (updatedChi, safeSub(rmul(updatedChi, pie), rmul(chi, pie)));
+        return (updatedChi, rmul(updatedChi, pie) - rmul(chi, pie));
     }
 
     // @notice This function charge interest on a interestBearingAmount
