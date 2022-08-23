@@ -4,3 +4,6 @@
 [submodule "lib/openzeppelin-contracts"]
 	path = lib/openzeppelin-contracts
 	url = https://github.com/openzeppelin/openzeppelin-contracts
+[submodule "lib/1945-Core"]
+	path = lib/1945-Core
+	url = https://github.com/novonine-space/1945-Core
