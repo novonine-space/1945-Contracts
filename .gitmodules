@@ -7,3 +7,6 @@
 [submodule "lib/1945-Core"]
 	path = lib/1945-Core
 	url = https://github.com/novonine-space/1945-Core
+[submodule "lib/1945-Packages"]
+	path = lib/1945-Packages
+	url = https://github.com/novonine-space/1945-Packages
